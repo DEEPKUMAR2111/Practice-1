@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Data.Models.ProductModel>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container">
+    <h1 style="text-align:center" >List of Products</h1>
+<div class="row pt-border-4">
+    <div class="col-6"></div>
+        <div class="col-6 text-end my-2">
+            <a asp-controller="Product" asp-action="Upsert" class="btn btn-success">
+               <i class="bi bi-plus-circle"></i> Add</a></div>
+    </div>
+<table  id="productTable" class="table table-bordered table-striped text-center">
+        <thead class="bg-primary" >
+            <tr  class="text-light">
+               <th scope="col" class="p-3">Name</th>
+              <th scope="col" class="p-3">Discription</th>
+               <th scope="col" class="p-3">Price</th>
+                    <th scope="col" class="p-3">Category</th>
+                         <th scope="col" class="p-3">Image</th>
+               <th scope="col" class="p-3">Changes</th>
+            </tr>
+        </thead>
+</table>
+</div>
+
+
+ @section Scripts{
+    <script src="~/js/Product.js"></script>
+        }
